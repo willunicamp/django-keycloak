@@ -183,6 +183,7 @@ class OpenIdConnectProfileAbstract(TokenModelAbstract):
             key=client.realm.certs,
             algorithms=client.openid_api_client.well_known[
                 'id_token_signing_alg_values_supported'],
+            options = { "verify_aud": False}, 
         )
 
 
